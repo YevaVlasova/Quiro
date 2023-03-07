@@ -1,0 +1,67 @@
+.header {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    &__logo {
+        @include text($ff, 600, 24px, 28px, $paragraph);
+    }
+    &__search {
+        position: relative;
+        input {
+            @include text($ff, 400, 14px, 16px, $white);
+            background: $black;
+            display: inline-block;
+            border: 0;
+            border-radius: 50px;
+            padding: 13px 18px;
+            outline: none;
+            padding-right: 35px;
+            &::placeholder {
+                color: $white;
+            }
+        }
+        img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 15px;
+        }
+    }
+}
+.nav {
+    &__ul {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+    &__a {
+        @include text($ff, 400, 16px, 19px, $black);
+        transition: $transition;
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            height: 1px;
+            width: 0;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -3px;
+            background: $primary;
+            transition: $transition;
+        }
+        &:hover {
+            color: $primary;
+        }
+        &._active {
+            font-weight: 600;
+            color: $primary;
+            &::before {
+                width: calc(100% - 10px);
+            }
+        }
+        
+    }
+}

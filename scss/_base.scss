@@ -1,0 +1,51 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $ff;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, p, h3, h4 {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    padding: 0 20px;
+    max-width: 1210px;
+    margin-inline: auto;
+}
+.btn {
+    display: inline-block;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    &_primary {
+        @include text($ff, 600, 20px, 23px, $terciary);
+    }
+    &_secondary {
+        background: $primary;
+        border-radius: 22px;
+        padding: 10px 25px;
+        @include text($ff, 600, 20px, 23px, $white);
+    }
+}
+
+
+
+.title {
+    @include text($ff, 700, 48px, 56px, $paragraph);
+}
+
+.desc {
+    @include text($ff, 400, 16px, 19px, $paragraph);
+}

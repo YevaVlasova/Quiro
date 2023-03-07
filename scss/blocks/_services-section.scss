@@ -1,0 +1,63 @@
+.services-section {
+    margin-top: 111px;
+    margin-bottom: 111px;
+    text-align: center;
+    .title {
+        margin-bottom: 70px;
+    }
+    .desc {
+        max-width: 837px;
+        margin-inline: auto;
+        margin-bottom: 123px;
+    }
+}
+
+.services {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    @include tablet-small {
+        grid-template-columns: 1fr 1fr;
+    }
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+    &-card {
+        background: $terciary;
+        border-radius: 15px;
+        padding: 46px 26px 51px;
+        transition: $transition;
+		&__img {
+            margin-bottom: 27px;
+		}
+		&__title {
+            @include text($ff, 600, 24px, 28px, $paragraph);
+            margin-bottom: 17px;
+		}
+		&__desc {
+            @include text($ff, 400, 16px, 19px, $text);
+            margin-bottom: 17px;
+		}
+		&__action {
+            display: flex;
+            justify-content: center;
+            a {
+                display: flex;
+                align-items: center;
+                gap: 2px;
+                @include text($ff, 600, 16px, 19px, $primary);
+                text-decoration-line: underline;
+            }
+		}
+        &:hover {
+            background: $primary;
+            .services-card__title, .services-card__desc, a {
+                color: $white;
+            }
+            svg path {
+                fill: $white;
+            }
+        }
+    }
+}
+

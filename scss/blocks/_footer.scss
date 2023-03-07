@@ -1,0 +1,53 @@
+.footer {
+    background: $terciary;
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 107px;
+    padding: 106px 0 66px;
+    @include tablet-small {
+        grid-template-columns: 1fr 1fr;
+    }
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+.footer-info {
+    max-width: 431px;
+
+		&__title {
+            @include text($ff, 600, 24px, 28px, $paragraph);
+            margin-bottom: 26px;
+		}
+
+		&__desc {
+            @include text($ff, 400, 16px, 19px, $paragraph);
+		}
+}
+.footer-contacts {
+    max-width: 285px;
+    gap: 37px;
+
+	&__title {
+        @include text($ff, 600, 20px, 23px, $paragraph);
+        margin-bottom: 9px;
+	}
+
+	&__desc {
+        @include text($ff, 400, 16px, 19px, $paragraph);
+        margin-bottom: 37px;
+	}
+}
+.footer-hours {
+    max-width: 187px;
+
+		&__title {
+            @include text($ff, 600, 20px, 23px, $paragraph);
+            margin-bottom: 17px;
+		}
+
+		&__desc {
+            @include text($ff, 400, 16px, 19px, $paragraph);
+            margin-bottom: 15px;
+		}
+}

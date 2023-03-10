@@ -733,7 +733,6 @@ li {
   grid-template-columns: 1fr 1fr 1fr;
   -webkit-column-gap: 107px;
           column-gap: 107px;
-  padding: 106px 0 66px;
 }
 @media (max-width: 768px) {
   .footer {
@@ -805,3 +804,4 @@ li {
   color: #262626;
   margin-bottom: 15px;
 }
+

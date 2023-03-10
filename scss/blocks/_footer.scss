@@ -1,10 +1,11 @@
 .footer {
+    max-width: 1440px;
+    padding: 106px 175px 81px 147px;
     background: $terciary;
     display: grid;
     
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 107px;
-    padding: 106px 0 66px;
     @include tablet-small {
         grid-template-columns: 1fr 1fr;
     }
@@ -12,6 +13,12 @@
         grid-template-columns: 1fr;
     }
 }
+
+.footer-section {
+    display: none;
+  }
+
+
 .footer-info {
     max-width: 431px;
 
@@ -50,4 +57,57 @@
             @include text($ff, 400, 16px, 19px, $paragraph);
             margin-bottom: 15px;
 		}
+}
+
+.footer-s {
+    @include text($ff, 600, 16px, 19px, $paragraph);
+  }
+
+.footer-section {
+    @include mobile {
+        .footer-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 50px 0;
+        }
+
+  
+        #footerInfo{
+            display: none;
+        }
+  
+        .material-icons {
+            cursor: pointer;
+        }
+  
+        .material-icons:hover {
+            color: #8842F0;
+        }
+  
+        .dn {
+            display: none;
+        }
+  
+        #footerInfo.db {
+            display: block;
+        }
+  
+        #footerContacts {
+            display: none;
+        }
+  
+        #footerContacts.db {
+            display: block;
+        }
+  
+        #footerHours {
+            display: none;
+        }
+  
+        #footerHours.db {
+            display: block;
+        }
+        
+    }
 }

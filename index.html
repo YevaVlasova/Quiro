@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet"  href="css/owl.carousel.css">
 	<link rel="stylesheet"  href="css/owl.theme.default.css">
     <link rel="stylesheet" href="css/style.css">
@@ -17,13 +18,19 @@
         <header class="header">
             <a href="#" class="header__logo">Quiro Diagnostic Center</a>
             <nav class="nav">
-                <ul class="nav__ul">
+                <div class="nav-burger">
+                    <span class="material-icons" onclick="navToggle()">menu</span>
+                </div>
+                <ul class="nav__ul" id="navBurger">
                     <li class="nav__li"><a href="#" class="nav__a _active">Home</a></li>
                     <li class="nav__li"><a href="#" class="nav__a">Service</a></li>
                     <li class="nav__li"><a href="#" class="nav__a">Doctors</a></li>
                     <li class="nav__li"><a href="#" class="nav__a">Gallery</a></li>
                     <li class="nav__li"><a href="#" class="nav__a">Contact</a></li>
                 </ul>
+                <div class="header__burger">
+                    <span class="material-icons" onclick="navToggle()">close</span>
+                </div>
             </nav>
             <div class="header__search">
                 <input type="search" placeholder="Search Here">
@@ -207,12 +214,28 @@
         </section>
 
 
-        <footer class="footer">
-            <div class="footer-info">
+        
+    </div>
+
+
+
+    <footer class="footer">
+        <div class="footer-info">
+            <div class="footer-section">
+                <h4 class="footer-s">Information</h4>
+                <span class="material-icons" onclick="infoToggle()">info</span>
+            </div>
+            <div id="footerInfo">
                 <div class="footer-info__title">Quiro Diagnostic Center</div>
                 <div class="footer-info__desc">Magnis facilisis tortor volutpat lobortis ac id. Libero enim nunc etiam consectetur lacus. In malesuada dictum turpis amet porttitor viverra laoreet at commodo. Pellentesque vitae id semper nec sollicitudin. Quis purus, mus consectetur pharetra ipsum facilisis amet cras purus.</div>
             </div>
-            <div class="footer-contacts">
+        </div>
+        <div class="footer-contacts">
+            <div class="footer-section">
+                <h4 class="footer-s">Contact us</h4>
+                <span class="material-icons" onclick="contactsToggle()">info</span>
+            </div>
+            <div id="footerContacts">
                 <div class="footer-contacts__title">Address</div>
                 <div class="footer-contacts__desc">5 Koh Sek Lim Rd Singapore 486050</div>
                 <div class="footer-contacts__title">Telephone</div>
@@ -220,20 +243,23 @@
                 <div class="footer-contacts__title">Email</div>
                 <div class="footer-contacts__desc">name@email.com</div>
             </div>
-            <div class="footer-hours">
+        </div>
+        <div class="footer-hours">
+            <div class="footer-section">
+                <h4 class="footer-s">Hours of work</h4>
+                <span class="material-icons" onclick="hourToggle()">info</span>
+            </div>
+            <div id="footerHours">
                 <div class="footer-hours__title">Opening Hour</div>
                 <div class="footer-hours__desc">Monday: 9am - 6pm</div>
                 <div class="footer-hours__desc">Tuesday: 9am - 6pm</div>
                 <div class="footer-hours__desc">Wednesday: 9am - 6pm</div>
                 <div class="footer-hours__desc">Thursday: 9am - 6pm</div>
                 <div class="footer-hours__desc">Friday: 9am - 6pm</div>
-                <div class="footer-hours__desc">Saturday: 9am - 6pm</div>  
+                <div class="footer-hours__desc">Saturday: 9am - 6pm</div>
             </div>
-        </footer>
-    </div>
-
-
-
+        </div>
+    </footer>
 
 
 

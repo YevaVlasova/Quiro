@@ -11,12 +11,18 @@
         text-align: center;
         margin-bottom: 123px;
     }
+    
 }
 .doctor {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
+    margin-inline: auto;
+    justify-content: center;
     margin-bottom: 129px;
+    @include tablet {
+        grid-template-columns: 1fr 1fr;
+    }
     @include tablet-small {
         grid-template-columns: 1fr 1fr;
     }

@@ -45,8 +45,30 @@ li {
 
 .title {
     @include text($ff, 700, 48px, 56px, $paragraph);
+    @include tablet {
+        @include text($ff, 700, 44px, 52px, $paragraph);
+    }
+
+    @include tablet-small {
+        @include text($ff, 700, 40px, 48px, $paragraph);
+    }
+
+    @include mobile {
+        @include text($ff, 700, 36px, 44px, $paragraph);
+    }
 }
 
 .desc {
     @include text($ff, 400, 16px, 19px, $paragraph);
+    @include tablet {
+        @include text($ff, 400, 15px, 18px, $paragraph);
+    }
+
+    @include tablet-small {
+        @include text($ff, 400, 14px, 17px, $paragraph);
+    }
+
+    @include mobile {
+        @include text($ff, 400, 13px, 16px, $paragraph);
+    }
 }

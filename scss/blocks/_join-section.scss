@@ -16,6 +16,15 @@
        
 
     }
+    @include tablet {
+        padding: 50px 100px;
+    }
+    @include tablet-small {
+        padding: 40px 80px;
+    }
+    @include mobile {
+        padding: 30px 20px;
+    }
 }
 // .email {
 //     position: relative;
@@ -53,4 +62,27 @@
         border: 0;
         outline: 0;
     }
+
+    @include tablet {
+        display: block;
+        background: $darkpurple;
+        margin-inline: auto;
+        .join-section {
+            padding: 20px;
+        }
+        .join-section__email {
+            display: block;
+            align-items: center;
+            padding-right: 0;
+        }
+        .email__input {
+            margin-bottom: 30px;
+        }
+        .btn_secondary {
+            display: block;
+            align-items: center;
+        }
+    }
 }
+
+

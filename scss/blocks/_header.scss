@@ -4,6 +4,13 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+
+    @include tablet-small {
+        padding: 30px 0;
+    }
+    @include mobile {
+        padding: 20px 0;
+    }
     &__logo {
         @include text($ff, 600, 24px, 28px, $paragraph);
     }
@@ -66,19 +73,19 @@
     }
 }
 
-.nav-burger {
+.nav-burger, .header__burger {
     display: none;
 }
 
 .nav-burger {
-    @include mobile {
+    @include tablet {
         display: flex;
         align-items: center;
     }
 
 
     #navBurger {
-        display: none;
+        display: block;
     }
 
     .material-icons {
@@ -86,7 +93,7 @@
     }
 
     .material-icons:hover {
-        color: #8842F0;
+        color: $primary;
     }
 
     .dn {
@@ -98,48 +105,46 @@
     }
 }
 
-
-
-
-
-
-
-
-.nav__ul .material-icons {
-    display: none;
+@media (max-width: 992px) {
+    .header__logo {
+        font-size: 22px;
+        max-width: 120px;
+    }
+    .header__search {
+        display: none;
+    }
 }
 
-.nav-burger {
-    display: none;
-    color: var(--color-primary-light);
-}
-
-@media (max-width: 492px) {
+@media (max-width: 992px) {
     .nav__ul {
         position: fixed;
         width: 100%;
         height: 100%;
+        overflow-y: auto;
+		background: $darkpurple;
         left: 0;
         top: 0;
-        overflow-y: auto;
+        color: $white;
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 40px;
         z-index: 5;
-        transform: translateX(120%);
+        transition: $transition;
+        transform: translateX(-120%);
     }
 
     .nav__ul._active {
         transform: translateX(0);
     }
 
-    .nav__ul .material-icons {
+    .nav-burger .material-icons {
         display: inline-block;
         position: fixed;
-        top: 20px;
-        right: 20px;
-        color: var(--color-white);
+        top: 80px;
+        right: 40px;
+        color: $black;
         cursor: pointer;
     }
 
@@ -147,4 +152,50 @@
         display: inline-block;
         cursor: pointer;
     }
+
+    .nav__a {
+        font-size: 21px;
+        line-height: 29px;
+        color: #fff;
+    }
+    .icon-close {
+        position: absolute;
+        top: 80px;
+        right: 40px;
+    }
+
+    .icon-menu,
+    .icon-close {
+	    display: none;
+
+	    @include tablet {
+		    display: inline-block;
+	    }
 }
+}
+
+@include tablet-small {
+    .icon-close {
+        position: absolute;
+        top: 60px;
+        right: 30px;
+    }
+    .nav-burger .material-icons {
+        top: 60px;
+        right: 30px;
+    }
+}
+
+@include mobile {
+    .icon-close {
+        position: absolute;
+        top: 50px;
+        right: 30px;
+    }
+    .nav-burger .material-icons {
+        top: 50px;
+        right: 30px;
+    }
+}
+
+    

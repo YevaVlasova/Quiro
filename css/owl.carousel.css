@@ -30,7 +30,7 @@
     border-radius: 30px;
     position: relative;
     overflow: hidden;
-    min-height: 570px;
+    max-height: 570px;
     /* fix for flashing background */
     -webkit-transform: translate3d(0px, 0px, 0px); }
   .owl-carousel .owl-wrapper,
